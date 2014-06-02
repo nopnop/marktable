@@ -1,0 +1,28 @@
+{
+  "name": "marktable",
+  "version": "0.0.0",
+  "description": "Markdown table parser, editor and formater ",
+  "main": "lib/marktable.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nopnop/marktable.git"
+  },
+  "keywords": [
+    "markdown",
+    "gfm",
+    "table",
+    "parser",
+    "formater",
+    "html",
+    "multiline"
+  ],
+  "author": "Jean Ponchon <jean.ponchon@novadiscovery.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nopnop/marktable/issues"
+  },
+  "homepage": "https://github.com/nopnop/marktable"
+}
