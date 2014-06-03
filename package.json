@@ -32,7 +32,7 @@
     "registry": "http://registry.npmjs.org/"
   },
   "devDependencies": {
-    "expect": "^0.1.1",
+    "expect.js": "^0.3.1",
     "mocha": "^1.20.0",
     "rfile": "^1.0.0"
   },
