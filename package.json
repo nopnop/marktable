@@ -1,6 +1,6 @@
 {
   "name": "marktable",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Markdown table parser, editor and formater ",
   "main": "lib/marktable.js",
   "scripts": {
