@@ -1,0 +1,13 @@
+> Should format basic Github Flavored Markdown tables
+
+## SOURCE
+
+| Header |
+|-
+| body |
+
+## EXPECTED
+
+| Header |
+|--------|
+| body   |
