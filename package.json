@@ -5,6 +5,7 @@
   "main": "lib/marktable.js",
   "scripts": {
     "test": "mocha",
+    "spec": "mocha --reporter spec",
     "monitor": "mocha --reporter spec --watch",
     "debugtest": "mocha --debug-brk --reporter spec",
     "coverage": "rm -rf ./lib-cov && jscoverage ./lib ./lib-cov && COVERAGE=true mocha --reporter html-cov > ./test/coverage.html && open ./test/coverage.html"
@@ -33,8 +34,7 @@
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
-    "mocha": "^1.20.0",
-    "rfile": "^1.0.0"
+    "mocha": "^1.20.0"
   },
   "dependencies": {
     "underscore": "^1.6.0",
