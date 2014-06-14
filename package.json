@@ -34,10 +34,12 @@
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
-    "mocha": "^1.20.0"
+    "mocha": "^1.20.0",
+    "chokidar": "^0.8.2"
   },
   "dependencies": {
     "underscore": "^1.6.0",
-    "underscore.string": "^2.3.3"
+    "underscore.string": "^2.3.3",
+    "debug": "^1.0.2"
   }
 }

@@ -20,12 +20,14 @@ readdirSync(__dirname)
 
     var auto = /\.auto\.md$/.test(filename) ? true : false;
 
+    var file = resolve(__dirname, filename);
     exports.add({
       id  : parseInt(filename.slice(0, 3)),
+      file: file,
       spec: humanize(filename.slice(4, (auto ? -8 : -4))),
       auto: auto,
       read: function() {
-        return exports.read(resolve(__dirname, filename))
+        return exports.read(file)
       }
     })
   })
