@@ -35,7 +35,8 @@
   "devDependencies": {
     "expect.js": "^0.3.1",
     "mocha": "^1.20.0",
-    "chokidar": "^0.8.2"
+    "chokidar": "^0.8.2",
+    "cli-color": "^0.3.2"
   },
   "dependencies": {
     "underscore": "^1.6.0",
