@@ -1,6 +1,31 @@
 Changelog
 =========
 
+v0.1.0 - Coldblooded Dolphin (2015-06-05) 
+----------------------------------------------------------------------
+
+  - refactor: Remove dependency on huge package like underscore / underscore.string
+  - refactor: Debug output
+  - refactor: rename Table#handle() to Table.handleParseResult()
+  - refactor: Parser refactoring, and more tests
+  - doc: Update license
+  - test: Remove .only
+  - test: refactor test
+  - test: Update coverage
+  - test: Move acceptance test
+  - test: Add some automatic fixture
+  - test: Add watch on fixture file to kill test process on change
+  - test: Add some acceptance tests
+  - test: Add base for acceptance test
+  - feat: Add Table#getInfos()
+  - feat: Add TBody#getInfos()
+  - feat: Add Column.getInfos()
+  - feat: Add Column.ALIGN_DEFAULT
+  - feat: Add Colgroup#getInfos()
+  - feat: Add default column alignement constatn
+  - fix: \Z escape two times
+
+
 v0.0.1 - Effusive Snake (2014-06-03) 
 ----------------------------------------------------------------------
 
