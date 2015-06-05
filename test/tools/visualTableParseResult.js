@@ -1,10 +1,10 @@
 var clc        = require('cli-color')
-var sprintf    = require('underscore.string').sprintf
+var format = require('util').format
 
 module.exports = visualTableParseResult;
 
 function visualTableParseResult(infos) {
-  return sprintf('TABLE range:[%s-%s] (%s %s %s %s) \n%s',
+  return format('TABLE range:[%s-%s] (%s %s %s %s) \n%s',
     infos.offset,
     infos.offsetEnd,
     clc.red.inverse('caption'),

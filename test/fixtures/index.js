@@ -1,17 +1,17 @@
 var readFileSync = require('fs').readFileSync
 var readdirSync  = require('fs').readdirSync
 var resolve      = require('path').resolve
-var humanize     = require('underscore.string').humanize
-var _            = require('underscore')
+var where = require('lodash.where')
+var findwhere = require('lodash.findwhere')
 
 
 var tests = [];
 
 
 exports.add   = function(test) { tests.push(test) }
-exports.get   = function(id)   { return _.findWhere(tests, {id:id}) }
+exports.get   = function(id)   { return findwhere(tests, {id:id}) }
 exports.all   = function()     { return tests }
-exports.where = function(prop) { return _.where(tests, prop) }
+exports.where = function(prop) { return where(tests, prop) }
 
 
 readdirSync(__dirname)
@@ -24,7 +24,7 @@ readdirSync(__dirname)
     exports.add({
       id  : parseInt(filename.slice(0, 3)),
       file: file,
-      spec: humanize(filename.slice(4, (auto ? -8 : -4))),
+      spec: filename.slice(4, (auto ? -8 : -4)),
       auto: auto,
       read: function() {
         return exports.read(file)

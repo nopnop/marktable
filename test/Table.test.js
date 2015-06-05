@@ -1,10 +1,9 @@
 /* jshint undef: false, unused: false */
 
 var marktable  = process.env.COVERAGE ? require('../lib-cov/marktable') : require('../lib/marktable')
-var _          = require('underscore')
+var pluck = require('lodash.pluck')
 var expect     = require('expect.js')
 var fixtures   = require('./fixtures/index')
-var lpad       = require('underscore.string').lpad
 var debug      = require('debug')('marktable:test')
 var viewTable  = require('./tools/visualTableParseResult')
 var Document   = marktable.Document
@@ -17,7 +16,7 @@ describe('marktable', function(){
   describe('Table', function() {
 
     describe('#parse()', function() {
-      
+
       it('should parse one basic table in a source', function() {
         var table  = new Table();
         var src    = fixtures.get(101).read().source;
@@ -64,7 +63,7 @@ describe('marktable', function(){
           "headers" : 1, "columns" : 4, "bodies"  : 1,
           "rows"    : 1, "lines"   : 1
         })
-        expect(_.pluck(table.colgroup.getInfos().columns, 'align'))
+        expect(pluck(table.colgroup.getInfos().columns, 'align'))
         .to.be.eql([
           Column.ALIGN_DEFAULT,
           Column.ALIGN_LEFT,

@@ -3,7 +3,7 @@
 var marktable  = process.env.COVERAGE ? require('../lib-cov/marktable') : require('../lib/marktable')
 var expect     = require('expect.js')
 var fixtures   = require('./fixtures/index')
-var lpad       = require('underscore.string').lpad
+var padleft = require('lodash.padleft')
 var debug      = require('debug')('marktable:test')
 var chokidar   = require('chokidar')
 
@@ -22,7 +22,7 @@ describe('marktable', function(){
     fixtures.where({auto:true})
       .forEach(function(test) {
         watcher.add(test.file)
-        it(lpad(test.id,3,'0') + '. ' + test.spec,function() {
+        it(padleft(test.id,3,'0') + '. ' + test.spec,function() {
           var fixture = test.read();
           var result  = marktable(fixture.source);
           expect(result.trim().split('\n'))
