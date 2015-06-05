@@ -1,9 +1,9 @@
-var clc        = require('cli-color')
+var clc = require('cli-color')
 var format = require('util').format
 
-module.exports = visualTableParseResult;
+module.exports = visualTableParseResult
 
-function visualTableParseResult(infos) {
+function visualTableParseResult (infos) {
   return format('TABLE range:[%s-%s] (%s %s %s %s) \n%s',
     infos.offset,
     infos.offsetEnd,
@@ -11,9 +11,9 @@ function visualTableParseResult(infos) {
     clc.blue.inverse('headers'),
     clc.green.inverse('columns'),
     clc.yellow.inverse('rows'),
-      clc.red.inverse(infos.caption || '')
-    + clc.blue.inverse(infos.headers || '')
-    + clc.green.inverse(infos.columns || '')
-    + clc.yellow.inverse(infos.rows || '')
+    clc.red.inverse(infos.caption || '') +
+    clc.blue.inverse(infos.headers || '') +
+    clc.green.inverse(infos.columns || '') +
+    clc.yellow.inverse(infos.rows || '')
   )
 }

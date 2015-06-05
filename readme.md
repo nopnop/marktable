@@ -1,4 +1,16 @@
 # Marktable
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![travis][travis-image]][travis-url]
+[![npm][npm-image]][npm-url]
+[![downloads][downloads-image]][downloads-url]
+
+[travis-image]: https://img.shields.io/travis/nopnop/marktable.svg?style=flat&branch=master
+[travis-url]: https://travis-ci.org/nopnop/marktable
+[npm-image]: https://img.shields.io/npm/v/marktable.svg?style=flat
+[npm-url]: https://npmjs.org/package/marktable
+[downloads-image]: https://img.shields.io/npm/dm/marktable.svg?style=flat
+[downloads-url]: https://npmjs.org/package/marktable
+
 
 **ALPHA: Dev ongoing - Not usable yet**
 
@@ -83,3 +95,5 @@ Some related projects, with different goal and usages, that may match you needs:
 # License
 
 The MIT license (see LICENSE.md)
+
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)

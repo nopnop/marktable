@@ -1,13 +1,12 @@
-var marktable = require('../lib/marktable'); // require('marktable')
+var marktable = require('../lib/marktable') // require('marktable')
 
 // Simple gfm table
 console.log(marktable([
   '|Foo|Bar|',
   '|-|',
   '| 42 |',
-  '',
-].join('\n')))
-
+  ''
+].join('\n')), '\n')
 
 // Simple gfm table with alignements
 console.log(marktable([
@@ -15,9 +14,8 @@ console.log(marktable([
   '|-:|:-:|',
   '| 42 |',
   '| | o |',
-  '',
-].join('\n')))
-
+  ''
+].join('\n')), '\n')
 
 // Colspan
 console.log(marktable([
@@ -25,9 +23,8 @@ console.log(marktable([
   '|-|',
   '| foo | bar |',
   '| One cell ||',
-  '',
-].join('\n')))
-
+  ''
+].join('\n')), '\n')
 
 // Multiline
 console.log(marktable([
@@ -39,8 +36,8 @@ console.log(marktable([
   '| cell |',
   '|-|',
   '| Another cell |',
-  '',
-].join('\n')))
+  ''
+].join('\n')), '\n')
 
 /*
 Yield:
