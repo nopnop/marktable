@@ -15,7 +15,7 @@ var Cursor     = marktable.Cursor
 
 describe('marktable', function(){
 
-  describe.only('Cursor', function() {
+  describe('Cursor', function() {
 
     describe('#fromPoint()', function() {
       it('should update cursor position from a buffer point object relative to table offset', function() {
