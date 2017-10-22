@@ -4,12 +4,12 @@
   "description": "Markdown table parser, editor and formater ",
   "main": "lib/marktable.js",
   "scripts": {
-    "test": "mocha",
+    "test": "npm run lint && mocha",
     "spec": "mocha --reporter spec",
     "monitor": "mocha --reporter spec --watch",
     "debugtest": "mocha --debug-brk --reporter spec",
-    "standard": "standard",
-    "coverage": "rm -rf ./lib-cov && jscoverage ./lib ./lib-cov && COVERAGE=true mocha --reporter html-cov > ./test/coverage.html && open ./test/coverage.html"
+    "lint": "standard",
+    "coverage": "nyc --reporter=html --reporter=text mocha"
   },
   "repository": {
     "type": "git",
@@ -34,13 +34,14 @@
     "registry": "http://registry.npmjs.org/"
   },
   "devDependencies": {
-    "chokidar": "^1.0.3",
     "cli-color": "^1.0.0",
     "expect.js": "^0.3.1",
     "lodash.findwhere": "^3.1.0",
     "lodash.pluck": "^3.1.2",
     "lodash.where": "^3.1.0",
-    "mocha": "^4.0.1"
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1",
+    "standard": "^10.0.3"
   },
   "dependencies": {
     "debug": "^3.1.0",
