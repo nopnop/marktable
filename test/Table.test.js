@@ -18,9 +18,13 @@ describe('marktable', function () {
         var result = table.parse(src)
         debug('Result:\n', viewTable(result))
         expect(table.getInfos()).to.be.eql({
-          'id': undefined, 'caption': undefined,
-          'headers': 1, 'columns': 2, 'bodies': 1,
-          'rows': 1, 'lines': 1
+          'id': undefined,
+          'caption': undefined,
+          'headers': 1,
+          'columns': 2,
+          'bodies': 1,
+          'rows': 1,
+          'lines': 1
         })
       })
 
@@ -30,9 +34,13 @@ describe('marktable', function () {
         var result = table.parse(src)
         debug('Result:\n', viewTable(result))
         expect(table.getInfos()).to.be.eql({
-          'id': undefined, 'caption': undefined,
-          'headers': 1, 'columns': 2, 'bodies': 1,
-          'rows': 1, 'lines': 1
+          'id': undefined,
+          'caption': undefined,
+          'headers': 1,
+          'columns': 2,
+          'bodies': 1,
+          'rows': 1,
+          'lines': 1
         })
       })
 
@@ -42,9 +50,13 @@ describe('marktable', function () {
         var result = table.parse(src)
         debug('Result:\n', viewTable(result))
         expect(table.getInfos()).to.be.eql({
-          'id': undefined, 'caption': undefined,
-          'headers': 2, 'columns': 2, 'bodies': 1,
-          'rows': 2, 'lines': 2
+          'id': undefined,
+          'caption': undefined,
+          'headers': 2,
+          'columns': 2,
+          'bodies': 1,
+          'rows': 2,
+          'lines': 2
         })
       })
 
@@ -54,17 +66,21 @@ describe('marktable', function () {
         var result = table.parse(src)
         debug('Result:\n', viewTable(result))
         expect(table.getInfos()).to.be.eql({
-          'id': undefined, 'caption': undefined,
-          'headers': 1, 'columns': 4, 'bodies': 1,
-          'rows': 1, 'lines': 1
+          'id': undefined,
+          'caption': undefined,
+          'headers': 1,
+          'columns': 4,
+          'bodies': 1,
+          'rows': 1,
+          'lines': 1
         })
         expect(pluck(table.colgroup.getInfos().columns, 'align'))
           .to.be.eql([
-          Column.ALIGN_DEFAULT,
-          Column.ALIGN_LEFT,
-          Column.ALIGN_CENTER,
-          Column.ALIGN_RIGHT
-        ])
+            Column.ALIGN_DEFAULT,
+            Column.ALIGN_LEFT,
+            Column.ALIGN_CENTER,
+            Column.ALIGN_RIGHT
+          ])
       })
 
       it('should parse table with multi-line-cells', function () {
@@ -73,9 +89,13 @@ describe('marktable', function () {
         var result = table.parse(src)
         debug('Result:\n', viewTable(result))
         expect(table.getInfos()).to.be.eql({
-          'id': undefined, 'caption': undefined,
-          'headers': 1, 'columns': 1, 'bodies': 1,
-          'rows': 2, 'lines': 4
+          'id': undefined,
+          'caption': undefined,
+          'headers': 1,
+          'columns': 1,
+          'bodies': 1,
+          'rows': 2,
+          'lines': 4
         })
       })
 
@@ -85,9 +105,13 @@ describe('marktable', function () {
         var result = table.parse(src)
         debug('Result:\n', viewTable(result))
         expect(table.getInfos()).to.be.eql({
-          'id': undefined, 'caption': undefined,
-          'headers': 1, 'columns': 1, 'bodies': 3,
-          'rows': 6, 'lines': 6
+          'id': undefined,
+          'caption': undefined,
+          'headers': 1,
+          'columns': 1,
+          'bodies': 3,
+          'rows': 6,
+          'lines': 6
         })
       })
 
@@ -97,9 +121,13 @@ describe('marktable', function () {
         var result = table.parse(src)
         debug('Result:\n', viewTable(result))
         expect(table.getInfos()).to.be.eql({
-          'id': 'tableID', 'caption': 'My table',
-          'headers': 1, 'columns': 2, 'bodies': 1,
-          'rows': 1, 'lines': 1
+          'id': 'tableID',
+          'caption': 'My table',
+          'headers': 1,
+          'columns': 2,
+          'bodies': 1,
+          'rows': 1,
+          'lines': 1
         })
       })
 
@@ -109,9 +137,13 @@ describe('marktable', function () {
         var result = table.parse(src)
         debug('Result:\n', viewTable(result))
         expect(table.getInfos()).to.be.eql({
-          'id': undefined, 'caption': undefined,
-          'headers': 0, 'columns': 2, 'bodies': 1,
-          'rows': 1, 'lines': 1
+          'id': undefined,
+          'caption': undefined,
+          'headers': 0,
+          'columns': 2,
+          'bodies': 1,
+          'rows': 1,
+          'lines': 1
         })
       })
 
@@ -123,8 +155,11 @@ describe('marktable', function () {
         expect(table.getInfos()).to.be.eql({
           'id': 'tableID',
           'caption': 'A table with many of the marktable functionalities',
-          'headers': 2, 'columns': 4, 'bodies': 4,
-          'rows': 8, 'lines': 12
+          'headers': 2,
+          'columns': 4,
+          'bodies': 4,
+          'rows': 8,
+          'lines': 12
         })
       })
     })
